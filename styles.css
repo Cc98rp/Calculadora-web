@@ -1,52 +1,95 @@
+/* Fondo general */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f3f4f6;
 }
 
+/* Contenedor de la calculadora */
 .calculadora {
-  background-color: #ffffff;
+  background-color: #1e1e2f;
+  border-radius: 20px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  width: 100%;
 }
 
+/* Pantalla */
 .pantalla input {
   width: 100%;
   font-size: 2rem;
-  text-align: right;
-  border: none;
   padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  background-color: #eaeaea;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  text-align: right;
+  background-color: #2a2a40;
+  color: #fff;
 }
 
+/* Botones */
 .botones {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 
 .boton {
   font-size: 1.5rem;
   padding: 15px;
-  background-color: #4caf50;
-  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.boton:hover {
+  transform: scale(1.1);
+}
+
+/* Colores de los botones */
+.boton {
+  background-color: #2a2a40;
+  color: #fff;
 }
 
 .boton.operador {
-  background-color: #f44336;
+  background-color: #ff5e57;
 }
 
 .boton.igual {
-  background-color: #2196f3;
+  background-color: #00a8ff;
+  color: #fff;
   grid-column: span 2;
+}
+
+.boton.igual:hover {
+  background-color: #0077cc;
+}
+
+.boton.operador:hover {
+  background-color: #ff3b3b;
+}
+
+.boton:hover {
+  background-color: #383850;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 400px) {
+  .boton {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .pantalla input {
+    font-size: 1.5rem;
+  }
 }
